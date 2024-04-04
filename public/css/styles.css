@@ -1,0 +1,56 @@
+/* Sets the standard font and font size */
+h1, h2, p {
+    font-family: Arial, Helvetica, sans-serif;
+    size: 18px;
+}
+
+/* Sets the header colour to a dark green */
+h1, h2 {
+    color: #141;
+}
+
+/* Positions secondary headers in the middle of the page */
+h2 {
+    width: 100%;
+    text-align: center;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 15px;
+}
+
+form {
+    padding: 20px;
+}
+
+/* Gives the navigation bar a darker coloured, rounded border */
+#main-header {
+    border-style: solid;
+    border-width: 5px;
+    border-color: #113611;
+    border-radius: 5px;
+}
+
+/* Gives each item in the navigation bar a background colour and specifies their margin and padding */
+#main-header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #141;
+}
+
+/* Aligns the items in the navigation bar to the left */
+#main-header ul li {
+    float: left;
+}
+
+/* Makes each item in the navigation bar a block, aligns the text inside to the centre and specifies the text colour and padding */
+#main-header ul li a {
+    display: block;
+    color: #eee;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}

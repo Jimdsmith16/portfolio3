@@ -8,11 +8,11 @@ use App\Http\Controllers\SearchFormController;
 
 Route::get('/', [ProjectController::class, "list"])->name("list_projects");
 Route::get("show/{id}", [ProjectController::class, "show"]);
-Route::get("delete/{id}", [ProjectController::class, "delete"]);
-Route::get("add-form", [AddFormController::class, "index"]);
-Route::post("store-form", [AddFormController::class, "store"]);
-Route::get("show/{id}/edit", [ProjectController::class, "edit"])->name("edit_project");
-Route::put("update/{id}", [ProjectController::class, "update"]);
+Route::get("delete/{id}", [ProjectController::class, "delete"])->middleware("auth");
+Route::get("add-form", [AddFormController::class, "index"])->middleware("auth");
+Route::post("store-form", [AddFormController::class, "store"])->middleware("auth");
+Route::get("show/{id}/edit", [ProjectController::class, "edit"])->name("edit_project")->middleware("auth");
+Route::put("update/{id}", [ProjectController::class, "update"])->middleware("auth");
 Route::get("logout", [LogoutController::class, "logout"]);
 Route::get("title-search-form", [SearchFormController::class, "titleIndex"]);
 Route::get("start-date-search-form", [SearchFormController::class, "startDateIndex"]);
